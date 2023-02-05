@@ -1,0 +1,156 @@
+*{
+	margin: 0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+
+h2{
+	cursor: pointer;
+	margin: 20px;
+}
+
+h2::before	{
+	content: "";
+	display: block;
+	height: 4px;
+	width: 100%;
+	background-color: red;
+	transform: scale(0);
+	transition: all 0.5s ease;
+	transform:translate(0px, 0px);
+
+}
+h2::after	{
+	content: "";
+	display: block;
+	height: 4px;
+	width: 100%;
+	background-color: black;
+	transform: scale(0);
+	transition: all 0.5s ease;
+	transform:translate(0px, 0px);
+}
+
+h2:hover::before{
+	transform:scale(1);
+	transform:translate(0px, 30px);
+}
+h2:hover::after{
+	transform: scale(1);
+	transform:translate(0px, -30px);
+}
+
+
+
+button{
+	border:none;
+	outline:none;
+	background-color: #e3e3e3;
+	padding: 0.5rem 1rem;
+	cursor:pointer;
+	position: relative;
+	margin-top: 20px;
+}
+
+button::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	/*background-color: red;*/
+	z-index: -1;
+	border:3px solid #e3e3e3;
+	transition: all 0.5s ease-in-out;
+
+}
+
+button:hover::before{
+	top:-6px;
+	bottom:-6px;
+	right:-6px;
+	left:-6px;
+
+}
+
+.kutu img{
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+}
+
+.kutu{
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	
+	margin: 10px 10px;
+	position: relative;
+}
+
+.kutu::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+	background-color: black;
+	border-radius: 50%;
+	transition: all 0.5s ease;
+
+
+}
+
+.kutu:hover::before{
+	z-index: 1;
+	opacity: 0.4;
+
+}
+
+.kutu1 img{
+	height: 250px;
+	width: 250px;
+	
+}
+
+.kutu1{
+	height: 250px;
+	width: 250px;
+	position: relative;
+	cursor: pointer;
+}
+
+.kutu1::before{
+	content: "SOSYaL FENNLER";
+	text-align: center;
+	line-height: 250px;
+	background-color: aqua;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transform: scale(0);
+	transition: all 0.5s ease;
+
+
+}
+
+
+.kutu1:hover::before{
+	transform: scale(1);
+}
+
+
